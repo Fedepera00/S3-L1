@@ -68,6 +68,15 @@ console.log(getStringLengths(["EPICODE", "is", "great"]));
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function getnumeridispari() {
+  const array = [];
+  for (let i = 1; i < 100; i += 2) {
+    array.push(i);
+  }
+  return array;
+}
+
+console.log(getnumeridispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
