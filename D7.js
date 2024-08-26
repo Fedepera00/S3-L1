@@ -184,28 +184,38 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-function findOldestMovie(movies) {
-  let oldestMovie = movies[0];
-  for (let i = 1; i < movies.length; i++) {
-    if (parseInt(movies[i].Year) < parseInt(oldestMovie.Year)) {
-      oldestMovie = movies[i];
-    }
-  }
-  return oldestMovie;
+function findOldestMovie(array) {
+  let findOldestMovie = 0;
+  array.forEach((movie) => console.log(movie.Year));
 }
 
-console.log(findOldestMovie(movies));
+findOldestMovie(movies);
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+function countMovies(movies) {
+  return movies.length;
+}
+
+console.log(countMovies(movies));
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+function getTitles(movies) {
+  return movies.map((movie) => movie.Title);
+}
 
+console.log(getTitles(movies));
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+function getMovies2000(movies) {
+  return movies.filter((movie) => parseInt(movie.Year) >= 2000);
+}
+
+console.log(getMovies2000(movies));
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
